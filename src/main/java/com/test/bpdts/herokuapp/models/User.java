@@ -1,4 +1,4 @@
-package com.test.bpdts.heruokuapp.models;
+package com.test.bpdts.herokuapp.models;
 
 import java.util.Objects;
 

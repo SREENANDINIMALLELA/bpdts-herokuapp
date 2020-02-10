@@ -1,7 +1,7 @@
-package com.test.bpdts.heruokuapp.controllers;
+package com.test.bpdts.herokuapp.controllers;
 
-import com.test.bpdts.heruokuapp.components.DistanceCalculator;
-import com.test.bpdts.heruokuapp.models.User;
+import com.test.bpdts.herokuapp.components.DistanceCalculator;
+import com.test.bpdts.herokuapp.models.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +32,7 @@ public class LocationController {
         List<User> doubleList = cityUsers.parallelStream().flatMap(it -> allUsers.stream().filter(ti -> distanceCalculator.distance(it.getLatitude(), it.getLongitude(), ti.getLatitude(), ti.getLongitude()) <= 50)).collect(Collectors.toList());
         long end = System.currentTimeMillis();
         long timeTaken = end - start;
-        logger.info("Processed in ms: {}",timeTaken);
+        logger.info("Processed in ms: {}", timeTaken);
         return doubleList;
 
     }

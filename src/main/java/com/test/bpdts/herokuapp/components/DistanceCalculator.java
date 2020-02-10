@@ -1,4 +1,4 @@
-package com.test.bpdts.heruokuapp.components;
+package com.test.bpdts.herokuapp.components;
 
 import org.springframework.stereotype.Component;
 
